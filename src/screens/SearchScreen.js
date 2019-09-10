@@ -12,7 +12,7 @@ const SearchScreen = () => {
 
   const filterResultsByPrice = (price) => {
     return results.filter(result => {
-      return results.price === price;
+      return result.price === price
     });
   };
 
@@ -30,7 +30,7 @@ const SearchScreen = () => {
         title="Cost Effective"
       />
       <ResultsLists results={filterResultsByPrice("$$")} title="Bit Pricier" />
-      <ResultsLists results={filterResultsByPrice("$$$")} title="Bid Spender" />
+      <ResultsLists results={filterResultsByPrice("$$$")} title="Big Spender" />
     </View>
   );
 };

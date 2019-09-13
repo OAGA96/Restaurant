@@ -11,7 +11,7 @@ export default () => {
         params: {
           limit: 50,
           term: searchTerm,
-          location: 'Hermosilo'
+          location: 'Guadalajara'
         }
       });
       setResults(response.data.businesses);
@@ -21,7 +21,7 @@ export default () => {
   };
 
   useEffect(() => {
-    searchApi('Burger');
+    searchApi('Mexicana');
   }, []);
 
   return [searchApi, results, errorMessage];

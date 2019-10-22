@@ -42,4 +42,8 @@ const SearchScreen = () => {
 
 const styles = StyleSheet.create({});
 
+SearchScreen.navigationOptions = {
+  title: 'App de Restaurante'
+}
+
 export default SearchScreen;

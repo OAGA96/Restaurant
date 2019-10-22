@@ -87,6 +87,10 @@ const ResultsShowScreen = ({ navigation }) => {
 
       </View>
       {/* Fin reviews */}
+
+      <Animatable.View animation= 'lightSpeedIn' delay= {200} style={styles.containerLugar} >
+          <Text style={styles.lugar} > {result.location.city}, {result.location.country} </Text>
+      </Animatable.View>
     </View>
   );
 };
@@ -141,6 +145,20 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: "white",
     flex: 10
+  },
+  containerLugar:{
+    flex: .5,
+    marginHorizontal: 15,
+    marginBottom: 15,
+    borderRadius: 10,
+    backgroundColor: '#ffffcf',
+    justifyContent: 'center',
+    alignContent: 'center'
+  },
+  lugar:{
+    textAlign: 'center',
+    fontSize: 18,
+    fontStyle: 'italic'
   }
 });
 

@@ -106,6 +106,7 @@ const styles = StyleSheet.create({
   },
   titulo: {
     fontSize: 28,
+    fontFamily: 'monospace',
     textAlign: "center",
     fontWeight: "bold"
   },
@@ -113,7 +114,7 @@ const styles = StyleSheet.create({
     marginLeft: 15,
     marginRight: 15,
     marginTop: 10,
-    backgroundColor: "#b2fef7",
+    backgroundColor: "#ffffcf",
     borderRadius: 10,
     justifyContent: "center",
     alignItems: "center",
@@ -124,7 +125,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold"
   },
   review: {
-    backgroundColor: "#b2fef7",
+    backgroundColor: "#ffffcf",
     paddingLeft: 8,
     paddingRight: 8,
     marginTop: 12,

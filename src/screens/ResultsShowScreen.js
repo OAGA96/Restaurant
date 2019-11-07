@@ -46,17 +46,19 @@ const ResultsShowScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       {/* Imagenes */}
-      <View style={styles.imageContainer}>
-        <FlatList
-          horizontal={true}
-          showsHorizontalScrollIndicator={false}
-          data={result.photos}
-          keyExtractor={photo => photo}
-          renderItem={({ item }) => {
-            return <Image style={styles.image} source={{ uri: item }} />;
-          }}
-        />
-      </View>
+      <Animatable.View animation="fadeInDownBig" >
+        <View style={styles.imageContainer}>
+          <FlatList
+            horizontal={true}
+            showsHorizontalScrollIndicator={false}
+            data={result.photos}
+            keyExtractor={photo => photo}
+            renderItem={({ item }) => {
+              return <Image style={styles.image} source={{ uri: item }} />;
+            }}
+          />
+        </View>
+      </Animatable.View>
       {/* Fin imagenes */}
 
       {/* Titulo del Restaurante */}
@@ -112,13 +114,14 @@ const styles = StyleSheet.create({
     fontSize: 28,
     fontFamily: 'monospace',
     textAlign: "center",
-    fontWeight: "bold"
+    fontWeight: "bold",
+    color: 'white'
   },
   tituloContainer: {
     marginLeft: 15,
     marginRight: 15,
     marginTop: 10,
-    backgroundColor: "#ffffcf",
+    backgroundColor: "#d21717",
     borderRadius: 10,
     justifyContent: "center",
     alignItems: "center",
@@ -126,10 +129,11 @@ const styles = StyleSheet.create({
   },
   nombre: {
     fontSize: 18,
-    fontWeight: "bold"
+    fontWeight: "bold",
+    color: 'white'
   },
   review: {
-    backgroundColor: "#ffffcf",
+    backgroundColor: "#ff5741",
     paddingLeft: 8,
     paddingRight: 8,
     marginTop: 12,
@@ -147,18 +151,20 @@ const styles = StyleSheet.create({
     flex: 10
   },
   containerLugar:{
-    flex: .5,
+    flex: 2,
     marginHorizontal: 15,
     marginBottom: 15,
     borderRadius: 10,
-    backgroundColor: '#ffffcf',
+    backgroundColor: '#ff5741',
     justifyContent: 'center',
-    alignContent: 'center'
+    alignContent: 'center',
+    opacity: 80
   },
   lugar:{
     textAlign: 'center',
     fontSize: 18,
-    fontStyle: 'italic'
+    fontStyle: 'italic',
+    color: 'white'
   }
 });
 

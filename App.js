@@ -2,16 +2,21 @@ import { createStackNavigator, createAppContainer } from "react-navigation";
 import SearchScreen from "./src/screens/SearchScreen";
 import ResultsScreenShow from './src/screens/ResultsShowScreen';
 import ResultsShowScreen from "./src/screens/ResultsShowScreen";
+import SignUp from './src/screens/Signup';
+import SignIn from './src/screens/SignIn';
 
 const navigator = createStackNavigator(
   {
     Search: SearchScreen,
-    ResultsShow: ResultsShowScreen
+    ResultsShow: ResultsShowScreen,
+    Up: SignUp,
+    In: SignIn
   },
   {
-    initialRouteName: "Search",
+    initialRouteName: "Up",
     defaultNavigationOptions: {
-      title: "BusinessSearch"
+      title: "RestaurantApp",
+      headerRight: null
     }
   }
 );

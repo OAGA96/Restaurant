@@ -104,56 +104,56 @@ const SignUp = ({navigation}) => {
           }}
         />
       </View>
+      <Animatable.View animation='fadeInUpBig' >
+        <View style={styles.form}>
+          <Divider
+            style={{ backgroundColor: "white", height: 6, marginBottom: 18 }}
+          />
+          <Input
+            placeholder="Nombre"
+            leftIcon={{ type: "antdesign", name: "user" }}
+            onChangeText={nombre => setNombre(nombre)}
+          />
+          <Input
+            placeholder="Edad"
+            leftIcon={{ type: "font-awesome", name: "id-badge" }}
+            onChangeText={edad => setEdad(edad)}
+          />
+          <Input
+            placeholder="Correo"
+            leftIcon={{ type: "antdesign", name: "mail" }}
+            onChangeText={correo => setCorreo(correo)}
+          />
+          <Input
+            placeholder="Contraseña"
+            onChangeText={psswd => setPsswd(psswd)}
+            leftIcon={{ type: "entypo", name: "lock" }}
+            secureTextEntry={true}
+          />
+          <Button title="Registrarse" type="clear" onPress= {setValue} />
+        </View>
 
-      <View style={styles.form}>
-        <Divider
-          style={{ backgroundColor: "white", height: 6, marginBottom: 18 }}
-        />
-        <Input
-          placeholder="Nombre"
-          leftIcon={{ type: "antdesign", name: "user" }}
-          onChangeText={nombre => setNombre(nombre)}
-        />
-        <Input
-          placeholder="Edad"
-          leftIcon={{ type: "font-awesome", name: "id-badge" }}
-          onChangeText={edad => setEdad(edad)}
-        />
-        <Input
-          placeholder="Correo"
-          leftIcon={{ type: "antdesign", name: "mail" }}
-          onChangeText={correo => setCorreo(correo)}
-        />
-        <Input
-          placeholder="Contraseña"
-          onChangeText={psswd => setPsswd(psswd)}
-          leftIcon={{ type: "entypo", name: "lock" }}
-          secureTextEntry={true}
-          ref = {this.psswdInput}
-        />
-        <Button title="Registrarse" type="clear" onPress= {setValue} />
-      </View>
-
-      <View style={styles.footer}>
-        <Button
-          title="Ya tengo una cuenta"
-          type="clear"
-          titleStyle={{ color: "red" }}
-          onPress= {() => navigation.navigate('In') }          
-        />
-        <Button
-          title="Correos Registrados"
-          type="clear"
-          titleStyle={{ color: "red", paddingTop: 220 }}
-          onPress= {getAllKeys}          
-        />
-        <Button
-          title="Eliminar registros"
-          type="clear"
-          titleStyle={{ color: "red" }}
-          onPress= {removeFew}          
-        />
-      </View>
+        <View style={styles.footer}>
+          <Button
+            title="Ya tengo una cuenta"
+            type="clear"
+            titleStyle={{ color: "red" }}
+            onPress= {() => navigation.navigate('In') }          
+          />
+          <Button
+            title="Correos Registrados"
+            type="clear"
+            titleStyle={{ color: "red", paddingTop: 220 }}
+            onPress= {getAllKeys}          
+          />
+          <Button
+            title="Eliminar registros"
+            type="clear"
+            titleStyle={{ color: "red" }}
+            onPress= {removeFew}          
+          />
+        </View>
+      </Animatable.View>
     </View>
   );
 };

@@ -13,7 +13,7 @@ const navigator = createStackNavigator(
     In: SignIn
   },
   {
-    initialRouteName: "Up",
+    initialRouteName: "In",
     defaultNavigationOptions: {
       title: "RestaurantApp",
       headerRight: null
